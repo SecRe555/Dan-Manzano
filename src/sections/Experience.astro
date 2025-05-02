@@ -1,0 +1,158 @@
+---
+import SectionContent from "@/components/SectionContent.astro";
+import Tooltip from "@/components/Tooltip.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<SectionContent title={"Experiencia"}>
+  <div class="card">
+    <h3 class="font-bold">GPC Logistíca (Marzo 2025 - Presente)</h3>
+    <p class="font-semibold">Becario de TI</p>
+    <ul class="flex flex-col gap-2 pl-5 list-disc">
+      <li>Mantenimiento de los sistemas web de la empresa.</li>
+      <li>
+        Actualización de procesos antiguos con base a nuevos requerimientos del
+        negocio.
+      </li>
+      <li>
+        Implementación de nuevas funcionalidades en los sistemas existentes.
+      </li>
+      <li>
+        Verificación de que los cambios aplicados funcionen correctamente y no
+        afecten negativamente otras partes del sistema.
+      </li>
+      <li>
+        Identificación y corrección de errores en producción, garantizando la
+        estabilidad operativa de los sistemas.
+      </li>
+    </ul>
+    <span class="flex gap-4 items-center">
+      <strong><i>Tecnologías utilizadas: </i></strong>
+      <span class="flex gap-4">
+        <Tooltip tooltipText="PHP">
+          <Icon class="w-10 h-10" name="devicon:php" />
+        </Tooltip>
+        <Tooltip tooltipText="Laravel">
+          <Icon class="w-10 h-10" name="devicon:laravel" />
+        </Tooltip>
+        <Tooltip tooltipText="MariaDB">
+          <Icon class="w-10 h-10" name="devicon:mariadb" />
+        </Tooltip>
+        <Tooltip tooltipText="Livewire">
+          <Icon class="w-10 h-10" name="devicon:livewire" />
+        </Tooltip>
+      </span>
+    </span>
+  </div>
+  <div class="card">
+    <h3 class="font-bold">Cadi Minatitlán (Septiembre 2024 - Octubre 2024)</h3>
+    <p class="font-semibold">Desarrollador web frontend</p>
+    <ul class="flex flex-col gap-2 pl-5 list-disc">
+      <li>
+        Desarrollo de la interfaz de usuario para un sistema web de gestión
+        administrativa de gimnasio.
+      </li>
+      <li>
+        Creación de una página web orientada a la promoción de las instalaciones
+        del gimnasio.
+      </li>
+      <li>
+        Uso de React con TypeScript y Material UI para el diseño y construcción
+        de componentes visuales.
+      </li>
+      <li>
+        Integración de animaciones con Framer Motion para mejorar la experiencia
+        de usuario en la página web.
+      </li>
+      <li>
+        Diseño responsivo en ambos proyectos, asegurando compatibilidad con
+        distintos dispositivos.
+      </li>
+    </ul>
+    <span class="flex flex-row gap-4 items-center">
+      <strong><i>Tecnologías utilizadas: </i></strong>
+      <div class="flex gap-4">
+        <Tooltip tooltipText="TypeScript">
+          <Icon class="w-10 h-10" name="devicon:typescript" />
+        </Tooltip>
+        <Tooltip tooltipText="React">
+          <Icon class="w-10 h-10" name="devicon:react" />
+        </Tooltip>
+        <Tooltip tooltipText="Vite">
+          <Icon class="w-10 h-10" name="devicon:vitejs" />
+        </Tooltip>
+        <Tooltip tooltipText="Material UI">
+          <Icon class="w-10 h-10" name="devicon:materialui" />
+        </Tooltip>
+        <Tooltip tooltipText="Framer Motion">
+          <Icon class="w-10 h-10" name="devicon:framermotion" />
+        </Tooltip>
+      </div>
+    </span>
+  </div>
+  <div class="card">
+    <h3 class="font-bold">
+      Dirección de Innovación Gubernamental y Tecnologías de la
+      Información de Coatzacoalcos, Veracruz (Julio 2023 - Agosto 2024)
+    </h3>
+    <p class="font-semibold">Desarrollador web frontend practicante</p>
+    <ul class="flex flex-col gap-2 pl-5 list-disc">
+      <li>
+  Desarrollo de la interfaz de usuario para un sistema web de gestión de usuarias de una dependencia municipal.
+</li>
+<li>
+  Utilización de React con TypeScript y Material UI para construir componentes visuales modernos y funcionales.
+</li>
+<li>
+  Implementación de autenticación segura mediante JSON Web Tokens (JWT).
+</li>
+<li>
+  Integración de la API de Google Maps para mostrar información relacionada con domicilios.
+</li>
+<li>
+  Desarrollo de scripts personalizados para exportar datos en distintos formatos de archivo.
+</li>
+<li>
+  Incorporación de gráficos y tablas interactivas para mejorar la visualización de datos.
+</li>
+    </ul>
+    <span class="flex flex-row gap-4 items-center">
+      <strong><i>Tecnologías utilizadas: </i></strong>
+      <div class="flex gap-4">
+        <Tooltip tooltipText="TypeScript">
+          <Icon class="w-10 h-10" name="devicon:typescript" />
+        </Tooltip>
+        <Tooltip tooltipText="React">
+          <Icon class="w-10 h-10" name="devicon:react" />
+        </Tooltip>
+        <Tooltip tooltipText="Vite">
+          <Icon class="w-10 h-10" name="devicon:vitejs" />
+        </Tooltip>
+        <Tooltip tooltipText="Material UI">
+          <Icon class="w-10 h-10" name="devicon:materialui" />
+        </Tooltip>
+      </div>
+    </span>
+  </div>
+</SectionContent>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px 0;
+    padding: 15px;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.4) 10%,
+        transparent 60%
+      ),
+      linear-gradient(to bottom, #fff, #f0f0f0);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    transition: all 0.3s ease-in-out;
+  }
+</style>
