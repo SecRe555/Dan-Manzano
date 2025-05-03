@@ -1,11 +1,12 @@
 ---
 import Badge from "@/components/Badge.astro";
 import Button from "@/components/Button.astro";
-import IconButton from "@/components/IconButton.astro";
 import GitHubLight from "@/icons/GitHubLight.astro";
 import LinkedinLight from "@/icons/LinkedinLight.astro";
 import { Icon } from "astro-icon/components";
 import { calculateAge } from "@/utils/calculateAge.js";
+import Image from "astro/components/Image.astro";
+import ProfileImage from "@/assets/imgs/profile.webp";
 
 const myAge = calculateAge();
 ---
@@ -17,7 +18,7 @@ const myAge = calculateAge();
     </span>
     <span class="credential-hole"></span>
     <span class="w-[50%] self-center rounded overflow-hidden">
-      <img src="https://picsum.photos/200" alt="Kirby's Photo" />
+      <Image src={ProfileImage} alt="Kirby's Photo" />
     </span>
     <span class="credential-fields">
       <p><strong>Nombre completo:</strong></p>
@@ -46,16 +47,16 @@ const myAge = calculateAge();
         href="https://linkedin.com/in/daniel-manzano-60666214a"
         target="_blank"
       >
-        <IconButton>
+        <Button>
           <LinkedinLight />
           Linkedin
-        </IconButton>
+        </Button>
       </a>
       <a href="https://github.com/SecRe555" target="_blank">
-        <IconButton>
+        <Button>
           <GitHubLight />
           GitHub
-        </IconButton>
+        </Button>
       </a>
     </span>
   </div>
@@ -80,8 +81,8 @@ const myAge = calculateAge();
     border-radius: 10px;
     border-top-left-radius: 0;
     border: 1px solid gainsboro;
+    margin-left: 55px;
     padding: 20px;
-    transition: all 0.3s ease-in-out;
   }
 
   .credential-hole {

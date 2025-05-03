@@ -1,0 +1,16 @@
+---
+import Button from "@/components/Button.astro";
+import SectionContent from "@/components/SectionContent.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<SectionContent title="Contacto">
+  <div class="flex gap-4 items-center">
+    <p><strong>Email: </strong>axelluisdaniel.mr@gmail.com</p>
+    <Button><Icon name="eva:copy-outline" /></Button>
+    <Button><Icon name="eva:paper-plane-outline" /></Button>
+    <span class="inline-block h-20 min-h-[1em] w-0.5 self-stretch bg-gray-300">
+    </span>
+    <Button><Icon name="eva:download-outline" />Descargar CV</Button>
+  </div>
+</SectionContent>

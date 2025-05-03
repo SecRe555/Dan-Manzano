@@ -1,0 +1,115 @@
+---
+import SectionContent from "@/components/SectionContent.astro";
+import Tooltip from "@/components/Tooltip.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<SectionContent title="Tecnologías">
+  <div class="responsive-grid gap">
+    <article class="flex flex-col gap-4">
+      <h3 class="text-xl font-bold">Frontend</h3>
+      <div class="tech-container">
+        <Tooltip tooltipText="Typescript">
+          <Icon class="tech-icon" name="devicon:typescript" />
+        </Tooltip>
+        <Tooltip tooltipText="React">
+          <Icon class="tech-icon" name="devicon:react" />
+        </Tooltip>
+        <Tooltip tooltipText="Flutter">
+          <Icon class="tech-icon" name="devicon:flutter" />
+        </Tooltip>
+      </div>
+    </article>
+    <article class="flex flex-col gap-4">
+      <h3 class="text-xl font-bold">Backend</h3>
+      <div class="tech-container">
+        <Tooltip tooltipText="Laravel">
+          <Icon class="tech-icon" name="devicon:laravel" />
+        </Tooltip>
+      </div>
+    </article>
+    <article class="flex flex-col gap-4">
+      <h3 class="text-xl font-bold">Bases de datos</h3>
+      <div class="tech-container">
+        <Tooltip tooltipText="MySQL">
+          <Icon class="tech-icon" name="devicon:mysql" />
+        </Tooltip>
+        <Tooltip tooltipText="MariaDB">
+          <Icon class="tech-icon" name="devicon:mariadb" />
+        </Tooltip>
+        <Tooltip tooltipText="SQLite">
+          <Icon class="tech-icon" name="devicon:sqlite" />
+        </Tooltip>
+      </div>
+    </article>
+    <article class="flex flex-col gap-4">
+      <h3 class="text-xl font-bold">Otras tecnologías y servicios</h3>
+      <div class="tech-container">
+        <Tooltip tooltipText="Git">
+          <Icon class="tech-icon" name="devicon:git" />
+        </Tooltip>
+        <Tooltip tooltipText="Supabase">
+          <Icon class="tech-icon" name="devicon:supabase" />
+        </Tooltip>
+        <Tooltip tooltipText="Godot">
+          <Icon class="tech-icon" name="devicon:godot" />
+        </Tooltip>
+      </div>
+    </article>
+    <article class="flex flex-col gap-4">
+      <h3 class="text-xl font-bold">Aprendiendo</h3>
+      <div class="tech-container">
+        <Tooltip tooltipText="Astro">
+          <Icon class="tech-icon" name="devicon:astro" />
+        </Tooltip>
+        <Tooltip tooltipText="Tailwind CSS">
+          <Icon class="tech-icon" name="devicon:tailwindcss" />
+        </Tooltip>
+        <Tooltip tooltipText="Next.js">
+          <Icon class="tech-icon" name="devicon:nextjs" />
+        </Tooltip>
+        <Tooltip tooltipText="Prisma">
+          <Icon class="tech-icon" name="devicon:prisma" />
+        </Tooltip>
+      </div>
+    </article>
+    <article class="flex flex-col gap-4">
+      <h3 class="text-xl font-bold">Nociones basicas</h3>
+      <div class="tech-container">
+        <Tooltip tooltipText="Java">
+          <Icon class="tech-icon" name="devicon:java" />
+        </Tooltip>
+        <Tooltip tooltipText="Python">
+          <Icon class="tech-icon" name="devicon:python" />
+        </Tooltip>
+        <Tooltip tooltipText="Ruby">
+          <Icon class="tech-icon" name="devicon:ruby" />
+        </Tooltip>
+        <Tooltip tooltipText="Qwik">
+          <Icon class="tech-icon" name="devicon:qwik" />
+        </Tooltip>
+      </div>
+    </article>
+  </div>
+</SectionContent>
+
+<style>
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    row-gap: 2rem;
+  }
+
+  .tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech-icon {
+    width: 3rem;
+    height: 3rem;
+    /* transition: transform 0.2s ease-in-out; */
+  }
+</style>
