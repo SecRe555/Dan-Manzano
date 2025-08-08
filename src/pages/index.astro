@@ -19,7 +19,7 @@ import Footer from "@/sections/Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Daniel Manzano</title>
   </head>
-  <body>
+  <body class="bg-white dark:bg-gray-800">
     <Header />
     <Presentation />
     <hr class="text-gray-300" />
@@ -39,9 +39,24 @@ import Footer from "@/sections/Footer.astro";
     font-family: "Nunito Variable", sans-serif;
     max-width: 48rem;
     margin: 0 auto;
+    background-color: white;
+    color: black;
+  }
+
+  .dark body {
+    background-color: var(--color-gray-800);
+    color: white;
   }
 
   h1 {
     margin: 0;
   }
+
+  * {
+    color: inherit;
+  }
 </style>
+
+<script>
+  console.log(window.matchMedia('(prefers-color-scheme: dark)'));
+</script>

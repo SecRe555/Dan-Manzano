@@ -1,32 +1,43 @@
-<button
-  class="flex justify-center items-center gap-2 py-2 px-4 bg-teal-400 rounded-md shadow-md hover:bg-teal-500 hover:shadow-xl/10 transition-shadow duration-300 ease-in-out"
->
-  <slot />
-</button>
+---
+const { href, target = "_self" } = Astro.props;
+const isLink = !!href;
+---
+
+{
+  isLink ? (
+    <a
+      href={href}
+      target={target}
+      class="flex justify-center items-center gap-2 py-2 px-4 !bg-teal-400 rounded-md shadow-md hover:bg-teal-500 hover:shadow-xl/10 transition-shadow duration-300 ease-in-out"
+    >
+      <slot />
+    </a>
+  ) : (
+    <button class="flex justify-center items-center gap-2 py-2 px-4 bg-teal-400 rounded-md shadow-md hover:bg-teal-500 hover:shadow-xl/10 transition-shadow duration-300 ease-in-out">
+      <slot />
+    </button>
+  )
+}
 
 <style>
+  a,
   button {
     cursor: pointer;
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
     transition-property: background-color, box-shadow, scale;
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
+  }
 
-    &:hover {
-      scale: 1.05;
-      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
-    }
+  a:hover,
+  button:hover {
+    scale: 1.05;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+  }
 
-    /* &:focus {
-      scale: 1.05;
-      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
-      outline: none;
-    } */
-
-    &:active {
-      scale: 0.95;
-      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
-      transition-duration: 100ms;
-    }
+  a:active,
+  button:active {
+    scale: 0.95;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
   }
 </style>

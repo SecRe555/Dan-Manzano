@@ -3,63 +3,57 @@ import Badge from "@/components/Badge.astro";
 import Button from "@/components/Button.astro";
 import GitHubLight from "@/icons/GitHubLight.astro";
 import LinkedinLight from "@/icons/LinkedinLight.astro";
-import { Icon } from "astro-icon/components";
-import { calculateAge } from "@/utils/calculateAge.js";
+import {Icon} from "astro-icon/components";
+import {calculateAge} from "@/utils/calculateAge.js";
 import Image from "astro/components/Image.astro";
 import ProfileImage from "@/assets/imgs/profile.webp";
 
 const myAge = calculateAge();
 ---
 
-<section class="flex justify-between items-center my-10">
-  <div class="credential-glass">
+<section id="presentation-section" class="flex justify-between items-center my-10">
+    <div class="credential-glass">
     <span class="credential-flip-btn bg-teal-400 hover:bg-teal-600">
-      <Icon class="w-full h-full object-fill" name="eva:flip-2-fill" />
+      <Icon class="w-full h-full object-fill" name="eva:flip-2-fill"/>
     </span>
-    <span class="credential-hole"></span>
-    <span class="w-[50%] self-center rounded overflow-hidden">
-      <Image src={ProfileImage} alt="Kirby's Photo" />
+        <span class="credential-hole"></span>
+        <span class="w-[50%] self-center rounded overflow-hidden">
+      <Image src={ProfileImage} alt="Daniel Manzano" loading={"eager"}/>
     </span>
-    <span class="credential-fields">
+        <span class="credential-fields">
       <p><strong>Nombre completo:</strong></p>
       <p>Axel Luis Daniel Manzano Rodriguez</p>
     </span>
-    <span class="credential-fields">
+        <span class="credential-fields">
       <p><strong>Edad:</strong></p>
       <p>{myAge}</p>
     </span>
-    <span class="credential-fields">
+        <span class="credential-fields">
       <p><strong>Pais:</strong></p>
       <p>México</p>
     </span>
-  </div>
-  <div class="flex flex-col justify-center gap-4">
-    <h1 class="m-0">Daniel Manzano</h1>
-    <p>
-      Egresado de la Licenciatura en Ingeniería de Sotftware.
-      <br />
-      Apasionado por la programación y el desarrollo web frontend.
-      <br />
-    </p>
-    <span class="flex gap-4 items-center">
+    </div>
+    <div class="flex flex-col justify-center gap-4">
+        <h1 class="m-0">Daniel Manzano</h1>
+        <p>
+            Egresado de la Licenciatura en Ingeniería de Sotftware.
+            <br/>
+            Apasionado por la programación y el desarrollo web frontend.
+            <br/>
+        </p>
+        <span class="flex gap-4 items-center">
       <Badge>Disponible para trabajar</Badge>
-      <a
-        href="https://linkedin.com/in/daniel-manzano-60666214a"
-        target="_blank"
-      >
-        <Button>
-          <LinkedinLight />
-          Linkedin
-        </Button>
-      </a>
-      <a href="https://github.com/SecRe555" target="_blank">
-        <Button>
-          <GitHubLight />
-          GitHub
-        </Button>
-      </a>
+      <Button href="https://linkedin.com/in/daniel-manzano-60666214a" target="_blank">
+  <LinkedinLight/>
+  Linkedin
+</Button>
+
+<Button href="https://github.com/SecRe555" target="_blank">
+  <GitHubLight/>
+  GitHub
+</Button>
     </span>
-  </div>
+    </div>
 </section>
 
 <style>
@@ -70,12 +64,12 @@ const myAge = calculateAge();
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.4) 10%,
-        transparent 60%
-      ),
-      linear-gradient(to bottom, #fff, #f0f0f0);
+    //background: linear-gradient(
+    //  145deg,
+    //  rgba(255, 255, 255, 0.4) 10%,
+    //  transparent 60%
+    //),
+    linear-gradient(to bottom, #fff, #f0f0f0);
     backdrop-filter: blur(10px);
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
     border-radius: 10px;
